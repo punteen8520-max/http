@@ -1,0 +1,52 @@
+<IfModule mod_rewrite.c>
+Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^home$ ?page=home [L,QSA]
+RewriteRule ^history$ ?page=history [L,QSA]
+RewriteRule ^team$ ?page=team [L,QSA]
+RewriteRule ^help$ ?page=help [L,QSA]
+RewriteRule ^topup$ ?page=topup [L,QSA]
+RewriteRule ^topup/$ ?page=topup [L,QSA]
+RewriteRule ^profile$ ?page=profile [L,QSA]
+RewriteRule ^login$ ?page=login [L,QSA]
+RewriteRule ^register$ ?page=register [L,QSA]
+RewriteRule ^rating$ ?page=rating [L,QSA]
+RewriteRule ^random$ ?page=random [L,QSA]
+RewriteRule ^spin$ ?page=spin [L,QSA]
+RewriteRule ^post$ ?page=post [L,QSA]
+RewriteRule ^terms$ ?page=term [L,QSA]
+RewriteRule ^resetpassword$ ?page=resetpassword [L,QSA]
+
+#shop
+RewriteRule ^shop$ ?page=shop [L,QSA]
+RewriteRule ^shop/(.*)$ ?page=shop&cat=$1 [L,QSA]
+
+#topup
+RewriteRule ^topup/truewalletgift$ ?page=topup&truewalletgift [L,QSA]
+RewriteRule ^topup/giftcode_topup$ ?page=topup&giftcode_topup [L,QSA]
+RewriteRule ^topup/truemoney$ ?page=topup&truemoney [L,QSA]
+
+#rating
+RewriteRule ^rating/1$ ?page=rating&1 [L,QSA]
+RewriteRule ^rating/2$ ?page=rating&2 [L,QSA]
+RewriteRule ^rating/3$ ?page=rating&3 [L,QSA]
+
+#admin
+RewriteRule ^admin$ ?page=admin [L,QSA]
+RewriteRule ^admin/home$ ?page=admin&menu=home [L,QSA]
+RewriteRule ^admin/stock$ ?page=admin&menu=stock [L,QSA]
+RewriteRule ^admin/user$ ?page=admin&menu=user [L,QSA]
+RewriteRule ^admin/user/(.*)$ ?page=admin&menu=user&ucode=$1 [L,QSA]
+RewriteRule ^admin/shopedit/(.*)$ ?page=admin&menu=shopedit&id=$1 [L,QSA]
+RewriteRule ^admin/shop$ ?page=admin&menu=shop [L,QSA]
+RewriteRule ^admin/topup$ ?page=admin&menu=topup [L,QSA]
+RewriteRule ^admin/topup/(.*)$ ?page=admin&menu=topup&id=$1 [L,QSA]
+RewriteRule ^admin/redeem$ ?page=admin&menu=redeem [L,QSA]
+RewriteRule ^admin/random$ ?page=admin&menu=random [L,QSA]
+RewriteRule ^admin/website$ ?page=admin&menu=website [L,QSA]
+RewriteRule ^admin/category$ ?page=admin&menu=category [L,QSA]
+RewriteRule ^admin/category/(.*)$ ?page=admin&menu=category&id=$1[L,QSA]
