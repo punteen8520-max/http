@@ -1,0 +1,15 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card-pd-set {
+    position: relative;
+    margin-top: -100px;
+    z-index: 10;
+}
+.img-pd {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 4px solid #000;
+}
